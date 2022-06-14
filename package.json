@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Matey-Tsilov/cubicle#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "handlebars": "^4.7.7"
+    "express-handlebars": "^6.0.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
