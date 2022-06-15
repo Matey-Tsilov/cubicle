@@ -2,6 +2,7 @@ const express = require('express')
 const port = 4000
 const app = express()
 const handlebars = require('express-handlebars')
+const routes = require('./routes')
 
 app.use('/static', express.static('public'))
 
@@ -11,9 +12,8 @@ app.engine('hbs', handlebars.engine({
 app.set('view engine', 'hbs')
 app.set('views', './src/views')
 
-app.get('/', (req, res) => {
-    res.render('index')
-})
+app.use(routes)
+
 app.get('/create', (req, res) => {
     res.render('create')
 })
