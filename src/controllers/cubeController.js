@@ -10,7 +10,7 @@ router.post('/create', async (req, res) => {
     const cube = req.body
 
     //Validate
-    if (cube.name.length < 2) {
+    if (cube.name.length < 3) {
         return res.status(400).send("Cube's name is too short!")
     }
 
