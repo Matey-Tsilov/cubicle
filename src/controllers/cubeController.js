@@ -27,7 +27,7 @@ try {
 })
 
 router.get('/details/:id', (req, res) => {
-    res.render('details', {cube: cubes[req.params.id]})
+    res.render('details', {cube: cubes.find(c => c.objectId == req.params.id)})
 })
 
 module.exports = router
