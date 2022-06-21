@@ -1,8 +1,9 @@
 const express = require('express')
 const port = 4000
-const app = express()
 const handlebars = require('express-handlebars')
 const routes = require('./routes')
+
+const app = express()
 
 app.use('/static', express.static('public'))
 
