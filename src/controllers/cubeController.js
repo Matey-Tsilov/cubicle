@@ -27,7 +27,7 @@ try {
 })
 
 router.get('/details/:id', (req, res) => {
-    res.render('details', cubes[req.params.id])
+    res.render('details', {cube: cubes[req.params.id]})
 })
 
 module.exports = router
