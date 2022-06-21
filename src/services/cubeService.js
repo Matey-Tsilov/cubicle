@@ -12,7 +12,7 @@ exports.save = (cube) => {
 exports.getAll = (search = "", from = 0, to = 6) => {
   const result = cubes
   .filter(c => c.name.toLowerCase().includes(search.toLowerCase()))
-  .filter(c => c.difficultyLevel >= from && c.difficultyLevel <= to);
+  .filter(c => Number(c.difficultyLevel) >= Number(from) && Number(c.difficultyLevel) <= Number(to));
     
 
   return result;
